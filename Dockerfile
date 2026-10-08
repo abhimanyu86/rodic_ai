@@ -22,4 +22,4 @@ ENV NEXT_PUBLIC_API_BASE=/api/v1
 RUN cd frontend && npm run build
 
 EXPOSE 7860
-CMD ["sh", "-c", "cd backend && uvicorn app.main:app --host 127.0.0.1 --port 8000 & cd frontend && npx next start -p 7860"]
+CMD ["sh", "-c", "cd backend && uvicorn app.main:app --host 127.0.0.1 --port 8000 & cd frontend && npx next start -p ${PORT:-7860}"]
