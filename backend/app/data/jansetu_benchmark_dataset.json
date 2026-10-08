@@ -1,0 +1,118 @@
+{
+  "project_metadata": {
+    "project_name": "JanSetu Enterprise v2.0",
+    "challenge": "Rodic InfraAI Innovation Challenge 2026",
+    "jurisdiction": "Greater Chennai Corporation (GCC) / Government of Tamil Nadu",
+    "benchmark_standards": "DARPG CPGRAMS Monthly Redressal Standards (June 2026)",
+    "synthetic_data_compliance": "PII scrubbed, fully anonymized per public data guidelines",
+    "total_records": 5
+  },
+  "benchmark_records": [
+    {
+      "ticket_id": "GRV-2026-0001",
+      "track": "Track A - Grievance Intelligence",
+      "intake_channel": "Voice AI (ta-IN)",
+      "language": "Tamil",
+      "raw_transcript": "எங்கள் பகுதியில் கடந்த மூன்று நாட்களாக தெருவிளக்கு வேலை செய்யவில்லை. இரவு நேரத்தில் மிகவும் இருட்டாக உள்ளது.",
+      "english_translation": "Streetlight in our area has not been working for the past three days. It is very dark at night.",
+      "extracted_category": "Public Infrastructure",
+      "department": "Municipal Electrical Services (TANGEDCO / GCC)",
+      "ward": "Ward 12, Zone 4, Anna Nagar West, Chennai",
+      "priority": "Medium",
+      "sla_hours": 48,
+      "trustshield_score": 0.94,
+      "explainability_tokens": ["தெருவிளக்கு (streetlight)", "இருட்டாக (darkness)"],
+      "status": "In Progress",
+      "visual_verification_match_pct": 96.0,
+      "auto_boq": {
+        "defect_description": "Damaged streetlight overhead fixture & blown LED ballast",
+        "estimated_cost_inr": 2850,
+        "materials": ["65W Commercial LED Luminaire", "Weatherproof Junction Seal"]
+      }
+    },
+    {
+      "ticket_id": "GRV-2026-0002",
+      "track": "Track A - Grievance Intelligence",
+      "intake_channel": "Web Portal (hi-IN)",
+      "language": "Hindi",
+      "raw_transcript": "हमारे वार्ड में पिछले दो दिनों से पीने के पानी की पाइपलाइन टूटी हुई है और गंदा पानी आ रहा है।",
+      "english_translation": "Drinking water pipeline has been broken in our ward for two days and contaminated water is flowing.",
+      "extracted_category": "Water Supply & Sewerage",
+      "department": "Chennai Metro Water (CMWSSB)",
+      "ward": "Ward 118, Zone 10, T-Nagar, Chennai",
+      "priority": "High",
+      "sla_hours": 48,
+      "trustshield_score": 0.96,
+      "explainability_tokens": ["पानी की पाइपलाइन (water pipeline)", "गंदा पानी (contaminated water)"],
+      "status": "Submitted",
+      "visual_verification_match_pct": null,
+      "auto_boq": {
+        "defect_description": "Sub-surface pipe fracture (4-inch main distribution line)",
+        "estimated_cost_inr": 4200,
+        "materials": ["4-inch DI Pipe Collar", "Trench Sealant Compound"]
+      }
+    },
+    {
+      "ticket_id": "GRV-2026-0003",
+      "track": "Track A - Grievance Intelligence (Emergency Bypass)",
+      "intake_channel": "Voice AI (ta-IN)",
+      "language": "Tamil",
+      "raw_transcript": "மின்மாற்றியில் பயங்கர தீப்பொறி பறக்கிறது, உடனடியாக வெடிக்கும் அபாயம் உள்ளது!",
+      "english_translation": "Dangerous sparking from the transformer pole, risk of imminent fire!",
+      "extracted_category": "Municipal Electrical Services",
+      "department": "TANGEDCO Rapid Response",
+      "ward": "Ward 173, Zone 13, Adyar, Chennai",
+      "priority": "Critical Emergency (Safety Bypass)",
+      "sla_hours": 2,
+      "trustshield_score": 0.98,
+      "explainability_tokens": ["தீப்பொறி (sparking)", "வெடிக்கும் அபாயம் (risk of explosion)"],
+      "status": "Dispatched",
+      "visual_verification_match_pct": null,
+      "auto_boq": {
+        "defect_description": "High-voltage pole transformer core overheating",
+        "estimated_cost_inr": 12500,
+        "materials": ["11kV Drop-out Fuse Unit", "Transformer Insulating Oil (20L)"]
+      }
+    },
+    {
+      "ticket_id": "GRV-2026-0004",
+      "track": "Track A - Grievance Intelligence",
+      "intake_channel": "WhatsApp Integration (en-IN)",
+      "language": "English",
+      "raw_transcript": "Deep crater pothole developed on Royapettah High Road after yesterday's rain.",
+      "english_translation": "Deep crater pothole developed on Royapettah High Road after yesterday's rain.",
+      "extracted_category": "Road Infrastructure",
+      "department": "GCC Public Works Department (Roads)",
+      "ward": "Ward 114, Zone 9, Royapettah, Chennai",
+      "priority": "High",
+      "sla_hours": 36,
+      "trustshield_score": 0.95,
+      "explainability_tokens": ["crater pothole", "Royapettah High Road"],
+      "status": "In Progress",
+      "visual_verification_match_pct": 94.5,
+      "auto_boq": {
+        "defect_description": "Pothole surface defect (14 sq ft / 3.5 inches deep)",
+        "estimated_cost_inr": 2400,
+        "materials": ["60 kg Cold-Mix Asphalt", "Tack Coat Emulsion"]
+      }
+    },
+    {
+      "ticket_id": "SCH-2026-0008",
+      "track": "Track B - Benefit Navigator",
+      "intake_channel": "Fast-Track e-KYC Portal",
+      "language": "English",
+      "scheme_id": "TN-METRO-02",
+      "scheme_name": "Chennai Metro Water (CMWSSB) Urban Piped Connection",
+      "department": "Municipal Administration & Water Supply (MAWS)",
+      "benefit_type": "100% Free Tap Sanctioned",
+      "ward": "Ward 12, Zone 4, Anna Nagar West, Chennai",
+      "verification_mode": "GCC Property Card & e-KYC Fast-Track",
+      "sla_hours": 72,
+      "trustshield_score": 0.99,
+      "explainability_tokens": ["Priority civic zone entitlement", "e-KYC clearance"],
+      "status": "Verification Scheduled (72h SLA)",
+      "visual_verification_match_pct": null,
+      "auto_boq": null
+    }
+  ]
+}
