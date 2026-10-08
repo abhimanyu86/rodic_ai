@@ -1,3 +1,13 @@
+---
+title: JanSetu
+emoji: 🏛️
+colorFrom: yellow
+colorTo: blue
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # JanSetu Enterprise v2.0
 ### Autonomous Citizen Access & Civic Redressal Orchestration Suite
 **Rodic InfraAI Innovation Challenge 2026** • *YellowSense JanSetu*  
