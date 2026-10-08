@@ -3,21 +3,19 @@ FROM node:20-slim
 RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-pip python3-venv \
     && rm -rf /var/lib/apt/lists/*
 
-# HF Spaces runs as uid 1000
-RUN useradd -m -u 1000 user
-USER user
-ENV HOME=/home/user PATH=/home/user/venv/bin:$PATH
-WORKDIR /home/user/app
+USER node
+ENV HOME=/home/node PATH=/home/node/venv/bin:$PATH
+WORKDIR /home/node/app
 
 # Backend deps
-RUN python3 -m venv /home/user/venv
-COPY --chown=user backend/requirements.txt backend/requirements.txt
+RUN python3 -m venv /home/node/venv
+COPY --chown=node backend/requirements.txt backend/requirements.txt
 RUN pip install --no-cache-dir -r backend/requirements.txt
 
 # Frontend deps + build (relative API base; Next rewrites /api -> backend on :8000)
-COPY --chown=user frontend/package.json frontend/package-lock.json frontend/
+COPY --chown=node frontend/package.json frontend/package-lock.json frontend/
 RUN cd frontend && npm ci
-COPY --chown=user . .
+COPY --chown=node . .
 ENV NEXT_PUBLIC_API_BASE=/api/v1
 RUN cd frontend && npm run build
 
